@@ -10,17 +10,28 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- *
- * @author johan
+ * Clase principal del proyecto, tiene incluido el menu del usuario y gestiona todos los datos del programa
+ * @author Camilo Tinoco
+ * @author Johan Zambrano
+ * @version 1.0.0
  */
 public class GestionDatos{
-    
+    /**
+     * Guarda las figuras ingresadas
+     */
     List<FigurasGeometricas> lista = new ArrayList<>();
+    
+    /**
+     * Constructor principal que ejectua el programa
+     */
     
     public GestionDatos(){
         main();
     }
     
+    /**
+     * Función que ejecutra el menú principal
+     */
     public void main(){
         byte opcion, desea;
         
@@ -45,7 +56,9 @@ public class GestionDatos{
             desea = (byte) leer.nextInt();
         } while (desea == 2);
     }
-    
+    /**
+     * Funcion que muestra las figuras que estan guardadas
+     */
     public void mostrarFigura(){
         for(int i=0; i<lista.size();i++){
             if(lista.get(i) instanceof Cuadrado){
@@ -86,7 +99,9 @@ public class GestionDatos{
         }
     }
     
-    
+    /**
+     * Funcion para agregar las figuras
+     */
     public void ingresarFigura(){
         
         byte opcion, agregar;
@@ -122,6 +137,11 @@ public class GestionDatos{
             }
 
     }
+    /**
+     * Funcion que guarda las coordenadas de la figura correspondiente
+     * @param tipo, 1 es cuadrado, 2 rectangulo, 3 triangulo
+     * @return Array de enteros que contiene las coordenadas de la figura
+     */
     public int[] coordenadas(int tipo) {
         
         int[] coordenadas = new int[8];

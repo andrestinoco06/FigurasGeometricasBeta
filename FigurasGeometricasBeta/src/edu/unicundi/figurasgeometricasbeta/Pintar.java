@@ -8,13 +8,16 @@ package edu.unicundi.figurasgeometricasbeta;
 import javax.swing.BoxLayout;
 
 /**
- *
+ * Clase JFrame para pintar las figuras geométricas
  * @author Camilo Tinoco
  * @author Johan Zambrano
  */
 public class Pintar extends javax.swing.JFrame{
     
-    //Este JFRAME, para pintar siempre se llama a este, y este llama al JPanel
+    /**
+     * Constructor principal
+     * @param coordenadas, Array de enteros con las coordenadas de la figura
+     */
     public Pintar(int[] coordenadas){
         super("Pintar");
         this.setSize(415,440); //tamaño

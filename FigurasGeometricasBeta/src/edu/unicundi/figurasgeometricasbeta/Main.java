@@ -13,11 +13,6 @@ import java.util.Scanner;
 public class Main {
     
     /**
-     * ArrayList "lista" para almacenar el objeto que se vaya agregar.
-     */
-    List<FigurasGeometricas> lista = new ArrayList<>();
-    
-    /**
      * Método Main para ejecutar el programa.
      * @param args 
      */
