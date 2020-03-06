@@ -26,7 +26,7 @@ public interface IFiguraGeometrica {
      * Método para validar si las coordenadas ingresadas pertenecen a una figura geometrica.
      * @return boolean
      */
-    public boolean validarFigura();
+    public boolean validarFigura(int [] coordenadas);
     
     //public void hallarLado(int [] coordenadas);
 }

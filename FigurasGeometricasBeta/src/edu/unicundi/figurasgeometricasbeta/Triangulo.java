@@ -91,8 +91,23 @@ public class Triangulo extends FigurasGeometricas{
     }
 
     @Override
-    public boolean validarFigura() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean validarFigura(int [] coordenadas) {
+                boolean validacion = true;
+        //valida que las coordenas sean correctas para un cuadrado
+        if (coordenadas[0] == coordenadas[2] && coordenadas[1] == coordenadas[3]) {
+            validacion=false;
+        }
+        if (coordenadas[0] == coordenadas[4] && coordenadas[1] == coordenadas[5]) {
+            validacion = false;
+        }        
+        if (coordenadas[2] == coordenadas[4] && coordenadas[3] == coordenadas[5]) {
+            validacion = false;
+        }        
+        if(validacion==false){
+            System.out.println("------------- No se puede pintar porque las coordenadas no son correctas --------- ");
+        }
+        return validacion;
+
     }
 
     @Override

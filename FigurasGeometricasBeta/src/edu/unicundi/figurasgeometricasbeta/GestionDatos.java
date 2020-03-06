@@ -65,18 +65,24 @@ public class GestionDatos{
         opcion = (byte) leer.nextInt();
         if(lista.get(opcion-1) instanceof Cuadrado){
             figura = new Cuadrado();
-            figura.pintar(lista.get(opcion-1).getCoordenadas());
-            figura.imprimir();
+            if(figura.validarFigura(lista.get(opcion-1).getCoordenadas())){
+                figura.pintar(lista.get(opcion-1).getCoordenadas());
+                figura.imprimir();
+            }
         }
         else if(lista.get(opcion-1) instanceof Rectangulo){
             figura = new Rectangulo();
-            figura.pintar(lista.get(opcion-1).getCoordenadas());
-            figura.imprimir();
+            if(figura.validarFigura(lista.get(opcion-1).getCoordenadas())){
+                figura.pintar(lista.get(opcion-1).getCoordenadas());
+                figura.imprimir();
+            }            
         }
         else {
             figura = new Triangulo();
-            figura.pintar(lista.get(opcion-1).getCoordenadas());
-            figura.imprimir();
+            if(figura.validarFigura(lista.get(opcion-1).getCoordenadas())){
+                figura.pintar(lista.get(opcion-1).getCoordenadas());
+                figura.imprimir();
+            }            
         }
     }
     

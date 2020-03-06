@@ -49,8 +49,19 @@ public class Rectangulo extends FigurasGeometricas{
     }
 
     @Override
-    public boolean validarFigura() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public boolean validarFigura(int [] coordenadas) {
+        boolean validacion = false;
+        //valida que las coordenas sean correctas para un cuadrado
+        if (coordenadas[1] == coordenadas[3]) {
+            if (coordenadas[2] == coordenadas[4]) {
+                if (coordenadas[5] == coordenadas[7]) {
+                    if (coordenadas[6] == coordenadas[0]) {
+                        validacion = true;
+                    }
+                }
+            }
+        }
+        return validacion;
     }
 
     @Override

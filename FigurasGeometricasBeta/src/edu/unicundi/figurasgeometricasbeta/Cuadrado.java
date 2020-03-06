@@ -39,7 +39,7 @@ public class Cuadrado extends FigurasGeometricas{
     }
 
     @Override
-    public boolean validarFigura() {
+    public boolean validarFigura(int [] coordenadas) {
         boolean validacion = false;
         //valida que las coordenas sean correctas para un cuadrado
         if (coordenadas[1] == coordenadas[3]) {
